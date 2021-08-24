@@ -1,0 +1,6 @@
+pyttsx3==2.90
+speechRecognition==3.8.1
+wikipedia==1.4.0
+python-dotenv==0.19.0
+pipwin==0.5.1
+pyaudio==0.2.11
