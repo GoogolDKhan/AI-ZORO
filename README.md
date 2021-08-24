@@ -15,6 +15,7 @@
   pip install pyttsx3
   pip install speechRecognition
   pip install wikipedia
+  pip install python-dotenv
 ```
 for using pyaudio
 ```bash
