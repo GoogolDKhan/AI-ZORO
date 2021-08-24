@@ -23,8 +23,7 @@ for using pyaudio
 ```
 ### Note
 
-- write your email password in place of passw
-- To use email, turn on Less secure app access on your gmail account
+- To use email account to send email, please turn on Less secure app access on your gmail account
 
 ## Know more about project
 
