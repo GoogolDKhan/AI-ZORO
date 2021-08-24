@@ -7,6 +7,10 @@ import os
 import random
 import smtplib
 
+# Environment variables
+from dotenv import load_dotenv
+load_dotenv()
+
 # Setting engine voice
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
@@ -56,8 +60,8 @@ def sendEmail(toEmail, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    fromEmail = 'googoldkhan@gmail.com'
-    server.login(fromEmail , 'passw')
+    fromEmail = os.getenv('SENDER_EMAIL')
+    server.login(fromEmail , os.getenv('PASSWORD'))
     server.sendmail(fromEmail , toEmail, content)
     server.close()
 
@@ -107,7 +111,7 @@ if __name__ == '__main__':
             try:
                 speak("What should I say")
                 content = takeCommand()
-                toEmail = "khansarfaraz2141@gmail.com"
+                toEmail = os.getenv('RECEIVER_EMAIL')
                 sendEmail(toEmail, content)
                 speak("Email sent! Sarfaraz")
             except Exception as e:
