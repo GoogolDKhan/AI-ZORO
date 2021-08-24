@@ -1,19 +1,3 @@
-'''
-SKY IS THE LIMIT
-Author  : Sarfaraz
-Date    : 12/05/2021
-Purpose : First Project
-ZORO - ONE PIECE
-pip install pyttsx3
-pip install speechRecognition
-pyaudio : pip install pipwin
-          pipwin install pyaudio
-pip install wikipedia
-write your email password in place of passw
-For email, turn on Less secure app access on your gmail account
-'''
-
-
 import pyttsx3
 import datetime
 import speech_recognition as sr
@@ -23,17 +7,17 @@ import os
 import random
 import smtplib
 
+# Setting engine voice
 engine = pyttsx3.init('sapi5')
 voices = engine.getProperty('voices')
-# print(voices[0].id)
 engine.setProperty('voice', voices[0].id)
 
-
+# speak function
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 
-
+# Function to wish the user according the time of the day
 def wishMe():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour < 12:
@@ -49,7 +33,8 @@ def wishMe():
 
 
 def takeCommand():
-    ''' It takes microphone input from the user and returns string output'''
+
+    # It takes microphone input from the user and returns string output
     r = sr.Recognizer()
     with sr.Microphone() as source:
         print("Listening...")
@@ -66,7 +51,7 @@ def takeCommand():
         return "None"
     return query
 
-
+# Function for sending email from one account to other using smtplib
 def sendEmail(toEmail, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
@@ -81,7 +66,8 @@ if __name__ == '__main__':
     wishMe()
     while True:
         query = takeCommand().lower()
-
+        
+        # Seaching query on wikipedia
         if 'wikipedia' in query:
             speak("Searching wikipedia...")
             query = query.replace("wikipedia", "")
@@ -100,7 +86,9 @@ if __name__ == '__main__':
             webbrowser.open("github.com")
 
         elif 'play music' in query:
-            music_dir = 'C:\\Users\khans\Downloads\Top100Singles' # write your music directory path here
+
+             # give your own music directory path here
+            music_dir = 'C:\\Users\khans\Downloads\Top100Singles'
             songs = os.listdir(music_dir)
             print(songs)
             randIndex = random.randint(0, len(songs)-1)
@@ -110,8 +98,9 @@ if __name__ == '__main__':
             strTime = datetime.datetime.now().strftime("%H:%M")
             speak(f"Sarfaraz, the time is {strTime}")
 
+        # give any folder or file path here which you wish to open
         elif 'open python programs' in query:
-            folderPath = 'C:\\Users\khans\Downloads\PROGRAMS\Python' # write any folder or file you wish to open
+            folderPath = 'C:\\Users\khans\Downloads\PROGRAMS\Python'
             os.startfile(folderPath)
 
         elif 'send email to my friend' in query:
