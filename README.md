@@ -1,9 +1,9 @@
 # ZORO
 
-- User can use this program for opening applications such as google chrome, VS Code or any folder on their machine.
-- One can open any url such as google, youtube, github etc and search their query in wikipedia.
+- Users can use this program for opening applications such as google chrome, VS Code, or any folder on their machine.
+- One can open any URL such as google, youtube, GitHub, etc, and search their query in Wikipedia.
 - An email can be easily sent to your friend from your account using this application.
-- This application also speaks the current time and plays music on their system.
+- This application also speaks the current time and can also play music on their system.
 
 ## Running
 
@@ -24,9 +24,9 @@ for using pyaudio
 ```
 ### Note
 
-- To use email account to send email, please turn on Less secure app access on your gmail account
+- To use your email account to send an email, please turn on Less secure app access on your Gmail account
 
-## Know more about project
+## Know more about the project
 
 #### What is pyttsx3?
 
