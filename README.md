@@ -3,7 +3,7 @@
 - Users can use this program for opening applications such as google chrome, VS Code, or any folder on their machine.
 - One can open any URL such as google, youtube, GitHub, etc, and search their query in Wikipedia.
 - An email can be easily sent to your friend from your account using this application.
-- This application also speaks the current time and can also play music on their system.
+- This application tells the user the current date time and can also play music on the request by the user from the songs library.
 
 ## Running
 
