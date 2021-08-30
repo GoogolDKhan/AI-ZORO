@@ -1,4 +1,4 @@
-# ZORO
+# ZORO [![CodeFactor](https://www.codefactor.io/repository/github/googoldkhan/ai-zoro/badge)](https://www.codefactor.io/repository/github/googoldkhan/ai-zoro)
 
 - Users can use this program for opening applications such as google chrome, VS Code, or any folder on their machine.
 - One can open any URL such as google, youtube, GitHub, etc, and search their query in Wikipedia.
