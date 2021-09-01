@@ -17,14 +17,27 @@
   pip install wikipedia
   pip install python-dotenv
 ```
+
 for using pyaudio
+
 ```bash
   pip install pipwin
   pipwin install pyaudio
 ```
+
 ### Note
 
 - To use your email account to send an email, please turn on Less secure app access on your Gmail account
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables in the .env file
+
+`SENDER_EMAIL`
+
+`PASSWORD`
+
+`RECEIVER_EMAIL`
 
 ## Know more about the project
 
@@ -41,12 +54,12 @@ for using pyaudio
 #### What Is VoiceId?
 
 - Voice id helps us to select different voices.
-- voice[0].id = Male voice 
+- voice[0].id = Male voice
 - voice[1].id = Female voice
 
 #### What is smtplib?
 
-- Simple Mail Transfer Protocol (SMTP) is a protocol that allows us to send emails and route emails between mail servers. An instance method called sendmail is present in the SMTP module. This instance method allows us to send an email.  It takes 3 parameters:
+- Simple Mail Transfer Protocol (SMTP) is a protocol that allows us to send emails and route emails between mail servers. An instance method called sendmail is present in the SMTP module. This instance method allows us to send an email. It takes 3 parameters:
 - The sender: Email address of the sender.
 - The receiver: T Email of the receiver.
 - The message: A string message which needs to be sent to one or more than one recipient.
